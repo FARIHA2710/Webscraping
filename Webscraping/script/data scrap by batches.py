@@ -8,7 +8,7 @@ def read_urls_from_csv(csv_file_path, start_index, end_index):
     # Use pandas to easily read the specific column from the CSV and slice the desired range
     df = pd.read_csv(csv_file_path)
     urls = df["Object_URL"].tolist()
-    print("la la la")
+
     return urls[start_index-1:end_index]  # Adjust for zero-based indexing
 
 def scrape_address_latitude_longitude(url):
