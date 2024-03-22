@@ -4,16 +4,17 @@ import csv
 import re
 import pandas as pd
 
-def read_urls_from_csv(csv_file_path):
-    # Use pandas to easily read the specific column from the CSV
+def read_urls_from_csv(csv_file_path, start_index, end_index):
+    # Use pandas to easily read the specific column from the CSV and slice the desired range
     df = pd.read_csv(csv_file_path)
-    return df["Street, Building Nr URL"].tolist()
+    urls = df["Object_URL"].tolist()
+    print("la la la")
+    return urls[start_index-1:end_index]  # Adjust for zero-based indexing
 
 def scrape_address_latitude_longitude(url):
     try:
         headers_request = {'Accept-Language': 'en-US,en;q=0.9'}  # Request English content
         response = requests.get(url, headers=headers_request)
-        #response = requests.get(url)
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
             address = soup.find('h1').text.strip()
@@ -43,12 +44,17 @@ def write_to_csv(data, csv_file_path):
             if row['Address'] and row['Latitude'] and row['Longitude']:
                 writer.writerow(row)
 
-# Input and output CSV file paths
-input_csv_path = 'buildings_data.csv'
-output_csv_path = 'location2.csv'
+# Define the range of URLs to process
+start_index = 14600 # Start from the first URL
+end_index =14769  # End at the 999th URL
 
-# Read URLs from the input CSV file
-urls = read_urls_from_csv(input_csv_path)
+# Input and output CSV file paths
+input_csv_path = 'Building_data.csv'
+#output_csv_path = 'location918_1300.csv'
+output_csv_path = 'location2.csv'#1301-1800
+
+# Read URLs from the input CSV file within the specified range
+urls = read_urls_from_csv(input_csv_path, start_index, end_index)
 
 # Initialize a list to store scraped data
 scraped_data = []
