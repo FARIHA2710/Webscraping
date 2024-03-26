@@ -55,7 +55,7 @@ end_index =14769  # End at the 999th URL
 input_csv_path = 'Building_data.csv'
 #output_csv_path = 'location918_1300.csv'
 output_csv_path = 'location2.csv'#1301-1800
-
+#hi
 # Read URLs from the input CSV file within the specified range
 urls = read_urls_from_csv(input_csv_path, start_index, end_index)
 
