@@ -25,8 +25,11 @@ def scrape_address_latitude_longitude(url):
                 if 'initMap' in script.text:
                     match = re.search(r'initMap\(([\d.-]+),\s*([\d.-]+)', script.text)
                     if match:
-                        latitude, longitude = match.groups()
+                        latitude = round(float(match.group(1)), 12)
+                        longitude = round(float(match.group(2)), 12)
                         break
+                        #latitude, longitude = match.groups()
+                        #break
             return address, latitude, longitude
         else:
             print(f"Failed to retrieve content from {url}")
