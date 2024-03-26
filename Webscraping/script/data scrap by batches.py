@@ -48,7 +48,7 @@ def write_to_csv(data, csv_file_path):
                 writer.writerow(row)
 
 # Define the range of URLs to process
-start_index = 14600 # Start from the first URL
+start_index = 14650 # Start from the first URL
 end_index =14769  # End at the 999th URL
 
 # Input and output CSV file paths
