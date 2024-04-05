@@ -1,3 +1,9 @@
+# #Loads data from "Final EHR.xlsx" into a pandas DataFrame.
+# Standardizes address fields ('Address' and 'ads_lahiaa') by removing punctuation, spaces, and converting to lowercase, saving the results in new columns ('Address_Clean' and 'ads_lahiaa_Clean').
+#  Applies fuzzy matching between the cleaned address columns using `fuzz.ratio`, and stores the match scores in a new column ('Match_Score').
+#  Filters rows in the DataFrame to only include those with a match score equal to or higher than a defined threshold (e.g., 90).
+#  Saves the filtered DataFrame with high match scores to a new Excel file named "matched_addresses.xlsx".
+
 import pandas as pd
 from fuzzywuzzy import fuzz
 
