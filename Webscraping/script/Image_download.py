@@ -1,3 +1,9 @@
+# 1. Reads a list of image URLs from "buildings_data.csv", specifically from a column named 'Photo URL', and limits the number of URLs to 15.
+# 2. For each URL, attempts to retrieve the webpage using `requests` and parse it with `BeautifulSoup` to find an `<img>` tag with a specific ID ('ph').
+# 3. Extracts the image source URL (`src` attribute) from the found `<img>` tag, adjusting relative URLs to absolute ones if necessary.
+# 4. Downloads the image from the extracted source URL, saving it to a folder named "downloaded_images". If the image filename does not end with '.jpg', it appends '.jpg' to the filename.
+# 5. Creates the "downloaded_images" folder if it doesn't exist, ensuring a place to save the downloaded images.
+
 import csv
 import requests
 from bs4 import BeautifulSoup
