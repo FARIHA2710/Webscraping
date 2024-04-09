@@ -1,3 +1,4 @@
+#download and generate latitude longitide in csv using the Object_URL column pregenetared, brings 12 decimals
 
 #this script runs every 6 minutes to avoid error while data scraping also, it brings 800 data each time with maximum decimal point available
 import requests

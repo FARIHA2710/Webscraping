@@ -1,3 +1,6 @@
+#download and generate latitude longitide in excel using the Object_URL column pregenetared, brings 12 decimals
+#and runs with a certain interval with automation
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd

@@ -1,3 +1,4 @@
+#Generates the whole table
 import requests
 from bs4 import BeautifulSoup
 import csv

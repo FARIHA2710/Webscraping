@@ -1,4 +1,4 @@
-
+#from created the photo urls from script Get_photourl_fromobject_url.py
 import pandas as pd
 import requests
 import os

@@ -1,4 +1,4 @@
-#creating urls using object_url column by webscraping
+#creating urls using object_url column by webscraping , use Object_URL s generated from script filter_series.py
 
 import pandas as pd
 import requests
