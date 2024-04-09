@@ -28,7 +28,7 @@ def get_photo_url(object_url, base_url="https://photobuildings.com/"):
     return None
 
 # Specify the path to your Excel file
-file_path = 'FilteredUrls.xlsx'
+file_path = 'Data\FilteredUrls.xlsx'
 
 try:
     # Read the Excel file into a DataFrame
