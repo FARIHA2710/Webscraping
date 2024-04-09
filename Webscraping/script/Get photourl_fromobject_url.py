@@ -1,3 +1,5 @@
+#creating urls using object_url column by webscraping
+
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
