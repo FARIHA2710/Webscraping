@@ -52,4 +52,4 @@ def move_duplicate_images(source_directory, target_directory):
 
 
 # Adjust these paths if necessary to match your directory structure
-move_duplicate_images('downloaded_images', 'Confusion Image')
+move_duplicate_images('downloaded_images2', 'Confusion Image')
