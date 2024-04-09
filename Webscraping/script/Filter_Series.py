@@ -8,7 +8,7 @@ import pandas as pd
 def filter_urls_by_series_project(datatest_excel_path, urls_csv_path, output_excel_path):
     # Attempt to load the Series_Project data from the Excel file
     try:
-        df_excel = pd.read_excel(datatest_excel_path, sheet_name='Sheet3', engine='openpyxl')
+        df_excel = pd.read_excel(datatest_excel_path, sheet_name='Sheet4', engine='openpyxl')
         print("Columns in Excel:", df_excel.columns)  # Debug: Print column names
         series_projects = df_excel['Series_Project'].unique().tolist()
     except Exception as e:
@@ -35,9 +35,9 @@ def filter_urls_by_series_project(datatest_excel_path, urls_csv_path, output_exc
         print(f"Error saving data to Excel file: {e}")
 
 # Specify your file paths
-datatest_excel_path = 'Datatest.xlsx'
-urls_csv_path = 'Urls.csv'
-output_excel_path = 'FilteredUrls.xlsx'
+datatest_excel_path = 'Data\Datatest.xlsx'
+urls_csv_path = 'Data\Datatest_Step2.csv'
+output_excel_path = 'Data\FilteredUrls.xlsx'
 
 filter_urls_by_series_project(datatest_excel_path, urls_csv_path, output_excel_path)
 
