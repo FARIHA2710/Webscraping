@@ -1,6 +1,6 @@
 # Loads 'Series_Project' values from "Datatest.xlsx", collecting unique values.
 # Loads URL data from "Urls.csv", URLS.csv have same data as "Datatest.xlsx" has in sheet1.
-# Filters the "Urls.csv" data to include entries matching the 'Series_Project' values from "Datatest.xlsx".
+# Filters the "Urls.csv" data to include entries matching the 'Series_Project' values from "Datatest.xlsx". filters the data with 42 catagories
 #Saves the filtered data to a new Excel file named "FilteredUrls.xlsx".
 
 import pandas as pd
